@@ -1,0 +1,103 @@
+<h1>Sprawdzacze odpowiedzi</h1>
+
+<h2>Czym są sprawdzacze odpowiedzi?</h2>
+
+<p>
+	Sprawdzacze odpowiedzi są różnymi sposobami sprawdzania poprawności
+	odpowiedzi przez NanoQuiz Java Edition. Na przykład, mogą wymagać
+	poprawności wielkich/małych liter lub akceptować wiele różnych odpowiedzi.
+</p>
+
+<h2>Jak używać sprawdzaczy odpowiedzi?</h2>
+
+<p>
+	Aby wybrać sprawdzacz, wpisz jego nazwę w nawiasach, przed odpowiedzią.
+	Dopuszczalne jest umieszczenie jednej spacji przed otwierającym nawiasem.
+</p>
+
+<pre><code>pytanie
+(sprawdzacz)odpowiedź</code></pre>
+
+<h1>Rodzaje sprawdzaczy odpowiedzi</h1>
+
+<h2>Sprawdzacze proste</h2>
+<p>Sprawdzacze proste pozwalają wybrać sposób porównywania odpowiedzi.</p>
+
+<h3><code>ci</code> (<code>case_insensitive</code>)</h3>
+<p>
+	Jest to domyślny sprawdzacz. Zostanie on użyty, jeśli nie zostanie podany
+	żaden inny. Nie zwraca on uwagi na wielkie litery ani spacje na początku i
+	końcu odpowiedzi.
+</p>
+<pre><code>Jak nazywa się nauka zajmująca się badaniem DNA?
+genetyka</code></pre>
+<pre><code>O jakim programie jest mowa w tym poradniku?
+(ci) NanoQuiz</code></pre>
+
+<h3><code>cs</code> (<code>case_sensitive</code>)</h3>
+<p>
+	Ten sprawdzacz zwraca on uwagę na wielkie litery, ale nie zwraca uwagi na
+	spacje na początku i końcu odpowiedzi.
+</p>
+<pre><code>Jak nazywał się dowódca 1. Dywizji Pancernej?
+(cs) generał Stanisław Maczek</code></pre>
+
+<h3><code>literal</code></h3>
+<p>
+	Ten sprawdzacz wymaga, aby odpowiedzi dokładnie się zgadzały. Oznacza to, że
+	muszą się zgadzać również wszystkie spacje, dlatego należy pamiętać, aby nie
+	zostawiać spacji po jego nazwie.
+</p>
+<pre><code>Kto stworzył NanoQuiz?
+(literal)cat24a</code></pre>
+<pre><code>Wpisz dwie spacje:
+(literal)  </code></pre>
+
+<h2>Sprawdzacze złożone</h2>
+<p>
+	Mimo swojej nazwy, nie są o wiele bardziej skomplikowane od sprawdzaczy
+	prostych. W rzeczywistości, nazwałem je tak, ponieważ modyfikują działanie
+	innych sprawdzaczy
+</p>
+
+<h3><code>multi</code> (<code>multiple</code>)</h3>
+<p>
+	Pozwala na ustalenie wielu poprawnych odpowiedzi. Odpowiedzi te mogą
+	zawierać dodatkowe sprawdzacze. Odpowiedzi należy oddzielić średnikiem
+	(<code>;</code>).
+</p>
+<pre><code>Jak nazywa się siła oddziaływania między ziemią a przedmiotem?
+(multi) siła grawitacji; grawitacja</code></pre>
+<pre><code>Jaka instrukcja tworzy pętlę w języku programowania Python?
+(multi) (literal)while; (literal)for</code></pre>
+<small
+	>↑ Ten przykład ilustruje, dlaczego ważne jest, że przed otwierającym
+	nawiasem może być jedna spacja.</small
+>
+
+<h3><code>renamed</code></h3>
+<p>
+	Zmienia odpowiedź widoczną na ekranie błędu. Należy podać odpowiedź widoczną
+	na ekranie błędu, średnik, sprawdzaną odpowiedź.
+</p>
+<pre><code>Wpisz spację:
+(renamed) &lt;SPACJA&gt;; (literal) </code></pre>
+<pre><code>Jakie liczby wymyślił Leonard Euler?
+(renamed) zespolone lub urojone; (multi) zespolone; urojone</code></pre>
+
+<h3><code>umlaut</code></h3>
+<p>
+	Pozwala wpisywać <code>A:U:O:</code> zamiast <code>ÄÜÖ</code>. Szczególnie
+	przydatne w przypadku zadań z niemieckiego. Jeśli nie zostanie podany żaden
+	dodatkowy sprawdzacz odpowiedzi, zostanie użyty cs.
+</p>
+<pre><code>Przetłumacz na niemiecki: wiatrak
+(umlaut) Windmühle</code></pre>
+<pre><code>Przetłumacz na niemiecki: wiatrak
+(umlaut) Windmu:hle</code></pre>
+
+<h2>Więcej sprawdzaczy wkrótce…</h2>
+<p>
+	Jeśli masz ciekawy pomysł, wyślij go do mnie
+	<a href="mailto:nanoquiz@1z4.de">e–mailem</a>!
+</p>

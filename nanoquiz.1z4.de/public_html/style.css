@@ -1,0 +1,87 @@
+nav {
+	display: block;
+	border: 1px solid black;
+	margin: 1em;
+	padding: 0.5em;
+	@media (width > 70ch) {
+		float: right;
+	}
+}
+nav a {
+	display: block;
+	color: blue;
+	width: fit-content;
+}
+nav a.active {
+	color: gray;
+}
+nav h3 {
+	margin-bottom: 0.2em;
+}
+nav h2 {
+	margin: 0em;
+}
+
+img {
+	max-width: 100%;
+}
+
+.tldr {
+	padding: 5px 10px;
+	border-radius: 8px;
+	background-color: aquamarine;
+	overflow: auto;
+}
+.tldr::before {
+	content: "TLDR";
+	font-family: sans-serif;
+	font-size: large;
+}
+
+.warning {
+	padding: 5px 10px;
+	border-radius: 8px;
+	background-color: lightsalmon;
+	overflow: auto;
+}
+.warning::before {
+	content: "UWAGA";
+	font-family: sans-serif;
+	font-size: large;
+}
+
+.tip {
+	padding: 5px 10px;
+	border-radius: 8px;
+	background-color: lightskyblue;
+	overflow: auto;
+}
+.tip::before {
+	content: "WSKAZÓWKA";
+	font-family: sans-serif;
+	font-size: large;
+}
+
+.button {
+	display: block;
+	background-color: blue;
+	color: white;
+	text-decoration: none;
+	padding: 5px;
+	border-radius: 5px;
+	font-size: larger;
+	width: fit-content;
+}
+
+code {
+	display: inline-block;
+	background-color: lightgray;
+	padding: 4px;
+	border-radius: 4px;
+	font-size: 1rem;
+}
+pre code {
+	display: block;
+	overflow: auto;
+	white-space: pre-wrap;
+}
