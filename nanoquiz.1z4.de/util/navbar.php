@@ -14,7 +14,7 @@ $cathegories = [
 		"Instalacja programu" => "/docs.php/install/nanoquiz",
 	],
 	"Tworzenie quizów" => [
-		"Podstway tworzenia quizów" => "/docs.php/creation/basic",
+		"Podstawy tworzenia quizów" => "/docs.php/creation/basic",
 		"Sprawdzacze odpowiedzi" => "/docs.php/creation/answer_checkers",
 		"Udostępnianie quizów" => "/docs.php/creation/sharing"
 	],
