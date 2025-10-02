@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Instrukcja obsługi NanoQuiz</title>
+	<title>NanoQuiz: Java Edition</title>
 	<link rel="stylesheet" href="/style.css">
 </head>
 <body>

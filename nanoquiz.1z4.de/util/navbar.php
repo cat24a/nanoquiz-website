@@ -20,7 +20,7 @@ $cathegories = [
 	],
 ];
 ?>
-<nav>
+<nav data-nosnippet>
 	<h2>NanoQuiz:<br>Java Edition</h3>
 	<?php foreach($cathegories as $cathegory => $entries) { ?>
 	<section>
